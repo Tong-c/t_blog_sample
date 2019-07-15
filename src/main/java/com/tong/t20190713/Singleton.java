@@ -15,4 +15,8 @@ public class Singleton implements Serializable {
         private static final Singleton singleton = new Singleton();
     }
 
+    private Object readResolve() {
+        return getInstance();
+    }
+
 }
